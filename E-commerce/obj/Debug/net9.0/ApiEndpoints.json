@@ -230,30 +230,8 @@
   },
   {
     "ContainingType": "E_Commerce.Controllers.CategoryController",
-    "Method": "Create",
-    "RelativePath": "api/Category/create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cate",
-        "Type": "BLL.System.CategoryDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "E_Commerce.Controllers.CategoryController",
     "Method": "GetById",
-    "RelativePath": "api/Category/id",
+    "RelativePath": "api/Category/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -261,7 +239,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -279,7 +257,7 @@
   {
     "ContainingType": "E_Commerce.Controllers.CategoryController",
     "Method": "Delete",
-    "RelativePath": "api/Category/id",
+    "RelativePath": "api/Category/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -287,7 +265,29 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.CategoryController",
+    "Method": "Create",
+    "RelativePath": "api/Category/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cate",
+        "Type": "BLL.System.CategoryDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

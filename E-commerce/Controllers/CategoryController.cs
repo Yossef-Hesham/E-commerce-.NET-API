@@ -23,14 +23,14 @@ namespace E_Commerce.Controllers
 
             return AllCate;
         }
-        [HttpGet("id")]
+        [HttpGet("{id:int}")]
         public async Task<CategoryDto> GetById(int id)
         {
             return await _categoryManager.GetById(id);
         }
 
 
-        [HttpDelete("id")]
+        [HttpDelete("{id:int}")]
         [Authorize(Roles = "Admin")]
         public async Task Delete(int id)
         {
@@ -43,7 +43,7 @@ namespace E_Commerce.Controllers
             await _categoryManager.CreateCategoryAsync(cate);
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("update/{id:int}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(int id, [FromQuery] string name)
         {
